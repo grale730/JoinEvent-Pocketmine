@@ -1,5 +1,6 @@
 name: JoinEvent
 main: GLF\JoinEvent\JEmain
 version: "1.0.0"
-api: [2.0.0, 2.1.0, 3.0.0-ALPHA1, 3.0.0]
+api:
+- '*'
 author: LaFuma_e_GabboMCPE
