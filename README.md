@@ -1,4 +1,4 @@
-# JoinEvent-By-LaFuma-GabboMCPE-
+# JoinEvent By LaFuma & GabboMCPE
 Cool JoinEvent Plugin for PocketMine &amp; forks
 ---------------------------------------
 This plugin was tested on
