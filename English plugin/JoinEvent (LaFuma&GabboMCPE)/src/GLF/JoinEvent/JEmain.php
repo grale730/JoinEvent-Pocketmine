@@ -3,17 +3,16 @@
  /*
  *                
  *
- * JoinEvent Plugin for PocketMine-MP & forks
+ * JoinEvent Plugin per PocketMine-MP & forks
  *
- * @Authors: LaFuma and GabboMCPE
- * @Telegram: @GabboMCPE and @LaFuma
+ * @Authors: LaFuma e GabboMCPE
+ * @Telegram: @GabboMCPE e @LaFuma
  * @Github: ?
  *
  *
  */
  
 namespace GLF\JoinEvent;
-
 use pocketmine\plugin\PluginBase;
 use pocketmine\Player;
 use pocketmine\Server;
@@ -25,19 +24,23 @@ use pocketmine\level\Level;
 use GLF\JoinEvent\FireworkParticle;
 use pocketmine\level\particle\LavaParticle;
 use pocketmine\level\particle\DestroyBlockParticle;
-
 class JEmain extends PluginBase
 implements Listener{
  public function onEnable (){
+	$this->getLogger() ->info(textFormat::GREEN."Plugin is now activated");
  	$this->getServer()->getPluginManager()->registerEvents($this, $this);
-  }
+ }
   
-  public function onJoin (PlayerJoinEvent $event)
+ public function onDisable() {
+    $this->getLogger() ->info(textFormat::GREEN."Plugin is now disabled");
+ }
+  
+ public function onJoin (PlayerJoinEvent $event)
 	{
 		$player = $event->getPlayer();
         $name = $player->getName();
-        $player->sendTip("ง9Welcome\n".$name."
-        \nง4Vote on linkwebsite!
+        $player->sendTip("ยง9Benvenuto\n".$name."
+        \nยง4Votaci su linkwebsite!
         \n\n\n\n\n");
 		$level = $player->level;
 		$v3 = new Vector3($player->x,$player->y+1,$player->z);
@@ -54,4 +57,4 @@ implements Listener{
 		$level->addParticle(new DestroyBlockParticle($v3,Block::get(152,0)));
 	}
 }
- 
+
