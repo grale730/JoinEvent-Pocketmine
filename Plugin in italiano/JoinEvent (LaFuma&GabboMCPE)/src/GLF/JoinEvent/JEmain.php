@@ -5,7 +5,7 @@
  *
  * JoinEvent Plugin per PocketMine-MP & forks
  *
- * @Authors: LaFuma e GabboMCPE
+ * @Autori: LaFuma e GabboMCPE
  * @Telegram: @GabboMCPE e @LaFuma
  * @Github: ?
  *
@@ -29,20 +29,15 @@ use pocketmine\level\particle\DestroyBlockParticle;
 class JEmain extends PluginBase
 implements Listener{
  public function onEnable (){
-	$this->getLogger() ->info(textFormat::GREEN."Plugin attivato");
  	$this->getServer()->getPluginManager()->registerEvents($this, $this);
- }
+  }
   
- public function onDisable() {
-    $this->getLogger() ->info(textFormat::GREEN."Plugin disattivato");
- }
-  
- public function onJoin (PlayerJoinEvent $event)
+  public function onJoin (PlayerJoinEvent $event)
 	{
 		$player = $event->getPlayer();
         $name = $player->getName();
         $player->sendTip("§9Benvenuto\n".$name."
-        \n§4Votaci su linkwebsite!
+        \n§4Vota su linkwebsite!
         \n\n\n\n\n");
 		$level = $player->level;
 		$v3 = new Vector3($player->x,$player->y+1,$player->z);
