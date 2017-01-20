@@ -3,11 +3,11 @@
  /*
  *                
  *
- * JoinEvent Plugin per PocketMine-MP & forks
+ * JoinEvent Plugin for PocketMine-MP & forks
  *
- * @Autori: LaFuma e GabboMCPE
- * @Telegram: @GabboMCPE e @LaFuma
- * @Github: ?
+ * @Authors: LaFuma and GabboMCPE
+ * @Telegram: @GabboMCPE and @LaFuma
+ * @Github: https://github.com/GabboMCPE/JoinEvent-Pocketmine
  *
  *
  */
@@ -36,8 +36,8 @@ implements Listener{
 	{
 		$player = $event->getPlayer();
         $name = $player->getName();
-        $player->sendTip("§9Benvenuto\n".$name."
-        \n§4Vota su linkwebsite!
+        $player->sendTip("§9Welcome\n".$name."
+        \n§4Vote on linkwebsite!
         \n\n\n\n\n");
 		$level = $player->level;
 		$v3 = new Vector3($player->x,$player->y+1,$player->z);
