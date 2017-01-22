@@ -1,7 +1,7 @@
 # JoinEvent By LaFuma & GabboMCPE
 Cool JoinEvent Plugin for PocketMine &amp; forks
 
-[URL="https://poggit.pmmp.io/ci/GabboMCPE/JoinEvent-Pocketmine/JoinEvent"][IMG]https://poggit.pmmp.io/ci.badge/GabboMCPE/JoinEvent-Pocketmine/JoinEvent[/IMG][/URL]
+[![Poggit-CI](https://poggit.pmmp.io/ci.badge/GabboMCPE/JoinEvent-Pocketmine/JoinEvent)](https://poggit.pmmp.io/ci/GabboMCPE/JoinEvent-Pocketmine/JoinEvent)
 This plugin was tested on
 Elywingㄨ
 PocketMine-MPㄨ
