@@ -7,7 +7,7 @@
  *
  * @Authors: LaFuma and GabboMCPE
  * @Telegram: @GabboMCPE and @LaFuma
- * @Github: https://github.com/GabboMCPE/JoinEvent-Pocketmine
+ * @Github: ?
  *
  *
  */
@@ -19,6 +19,11 @@ use pocketmine\Player;
 use pocketmine\Server;
 use pocketmine\event\Listener;
 use pocketmine\event\player\PlayerJoinEvent;
+use pocketmine\nbt\tag\DoubleTag;
+use pocketmine\nbt\tag\FloatTag;
+use pocketmine\nbt\tag\ListTag;
+use pocketmine\nbt\tag\ShortTag;
+use pocketmine\utils\TextFormat;
 use pocketmine\math\Vector3;
 use pocketmine\block\Block;
 use pocketmine\level\Level;
@@ -29,10 +34,15 @@ use pocketmine\level\particle\DestroyBlockParticle;
 class JEmain extends PluginBase
 implements Listener{
  public function onEnable (){
+	$this->getLogger() ->info(TextFormat::GREEN . "Plugin activated");
  	$this->getServer()->getPluginManager()->registerEvents($this, $this);
-  }
+ }
   
-  public function onJoin (PlayerJoinEvent $event)
+ public function onDisable() {
+    $this->getLogger() ->info(TextFormat::RED . "Plugin disabled");
+ }
+  
+ public function onJoin (PlayerJoinEvent $event)
 	{
 		$player = $event->getPlayer();
         $name = $player->getName();
