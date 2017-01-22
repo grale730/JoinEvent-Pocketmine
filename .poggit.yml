@@ -2,8 +2,6 @@
 branches:
 - master
 projects:
-  English plugin.JoinEvent (LaFuma&GabboMCPE):
+  JoinEvent:
     path: English plugin/JoinEvent (LaFuma&GabboMCPE)/
-  Plugin in italiano.JoinEvent (LaFuma&GabboMCPE):
-    path: Plugin in italiano/JoinEvent (LaFuma&GabboMCPE)/
 ...
