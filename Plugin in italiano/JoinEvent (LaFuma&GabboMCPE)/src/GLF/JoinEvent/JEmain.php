@@ -5,7 +5,7 @@
  *
  * JoinEvent Plugin per PocketMine-MP & forks
  *
- * @Autori: LaFuma e GabboMCPE
+ * @Authors: LaFuma e GabboMCPE
  * @Telegram: @GabboMCPE e @LaFuma
  * @Github: ?
  *
@@ -19,6 +19,11 @@ use pocketmine\Player;
 use pocketmine\Server;
 use pocketmine\event\Listener;
 use pocketmine\event\player\PlayerJoinEvent;
+use pocketmine\nbt\tag\DoubleTag;
+use pocketmine\nbt\tag\FloatTag;
+use pocketmine\nbt\tag\ListTag;
+use pocketmine\nbt\tag\ShortTag;
+use pocketmine\utils\TextFormat;
 use pocketmine\math\Vector3;
 use pocketmine\block\Block;
 use pocketmine\level\Level;
@@ -29,15 +34,20 @@ use pocketmine\level\particle\DestroyBlockParticle;
 class JEmain extends PluginBase
 implements Listener{
  public function onEnable (){
+	$this->getLogger() ->info(TextFormat::GREEN . "Plugin attivato");
  	$this->getServer()->getPluginManager()->registerEvents($this, $this);
-  }
+ }
   
-  public function onJoin (PlayerJoinEvent $event)
+ public function onDisable() {
+    $this->getLogger() ->info(TextFormat::RED . "Plugin disattivato");
+ }
+  
+ public function onJoin (PlayerJoinEvent $event)
 	{
 		$player = $event->getPlayer();
         $name = $player->getName();
-        $player->sendTip("§9Benvenuto\n".$name."
-        \n§4Vota su linkwebsite!
+        $player->sendTip("ยง9Benvenuto\n".$name."
+        \nยง4Votaci su linkwebsite!
         \n\n\n\n\n");
 		$level = $player->level;
 		$v3 = new Vector3($player->x,$player->y+1,$player->z);
