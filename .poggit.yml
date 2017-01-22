@@ -1,0 +1,9 @@
+--- # Poggit-CI Manifest. Open the CI at https://poggit.pmmp.io/ci/GabboMCPE/JoinEvent-Pocketmine
+branches:
+- master
+projects:
+  English plugin.JoinEvent (LaFuma&GabboMCPE):
+    path: English plugin/JoinEvent (LaFuma&GabboMCPE)/
+  Plugin in italiano.JoinEvent (LaFuma&GabboMCPE):
+    path: Plugin in italiano/JoinEvent (LaFuma&GabboMCPE)/
+...
