@@ -46,8 +46,8 @@ implements Listener{
 	{
 		$player = $event->getPlayer();
         $name = $player->getName();
-        $player->sendTip("ยง9Benvenuto\n".$name."
-        \nยง4Votaci su linkwebsite!
+        $player->sendTip("§9Benvenuto\n".$name."
+        \n§4Votaci su linkwebsite!
         \n\n\n\n\n");
 		$level = $player->level;
 		$v3 = new Vector3($player->x,$player->y+1,$player->z);
